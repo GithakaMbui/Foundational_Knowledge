@@ -62,4 +62,67 @@ echo "The Octal number is $numberOctal";
 echo "</br>";
 echo "When you add \n " .$numberOctal. "\n and \n" .$hexaNumber. "\n you get";
 echo "</br>";
+echo "</br>";
 ?>
+
+<!--3. Float data Type-->
+<!--Is an number with a decimal point-->
+<?php
+$n1 = 19.34;
+$n2 = 54.472;
+$sum = $n1 + $n2;
+echo "The rsult of te Addition of floating numbers: " .$sum;
+echo "</br>";
+?>
+
+<!--4. Strings-->
+<!--Is a non numeric data type-->
+<?php
+$company = "Tiket Technologies";
+//both single and double quote statements will treat different
+echo "Hello $company";
+echo "</br>";
+echo 'Hello $company';
+echo "</br>";
+echo "</br>";
+?>
+
+<!--5. Array-->
+<!--It can store multiple values of the same data in a signle variable-->
+<?php
+$bikes = array ("Royal Enfield", "Yamaha", "KTM");
+var_dump($bikes);   //the var_dump() function returns the datatype and values
+echo "</br>";
+echo "</br>";
+echo "Array Element1 is: $bikes[0] </br>";
+echo "Array Element2 is: $bikes[1] </br>";
+echo "Array Element3 is: $bikes[2] </br>";
+echo "</br>";
+?>
+
+<!--6. PHP Objects-->
+<!--Objects are the instances of user-defined classes that can store both values and functions.-->
+<!--They must be explicitly declared.-->
+<?php
+class bike {
+    function model() {
+        $model_name = "Royal Enfield";
+        echo "Bike Model: " .$model_name;
+    }
+}
+$obj = new bike();
+$obj -> model();
+?>
+
+<!--7. NULL-->
+<!--Null is a special data type that has only one value: NULL. -->
+<!--There is a convention of writing it in capital letters as it is case sensitive.-->
+<?php
+$nl = NULL;
+echo $nl;   //it will not give any output
+?>
+
+<!--8. Resource:
+When PHP connects to an external data source,-->
+<!--such as a file or database, -->
+<!--it stores a reference to it as a resource.-->
