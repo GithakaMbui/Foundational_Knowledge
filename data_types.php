@@ -58,6 +58,8 @@ echo "base Ten number is: " .$baseTenNumber. "</br>";
 echo "Octal number is: " .$numberOctal. "</br>";
 echo "HexaDecimal number is: " .$hexaNumber. "</br>";
 echo "The Octal number is $numberOctal";
+
 echo "</br>";
+echo "When you add \n " .$numberOctal. "\n and \n" .$hexaNumber. "\n you get";
 echo "</br>";
 ?>
