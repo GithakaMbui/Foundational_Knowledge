@@ -56,4 +56,36 @@ if(empty($gameConsole))
 {
     echo " This variable does not have a value";
 }
+echo "</br>";
+echo "</br>";
 ?>
+
+<!--Variable concatenation-->
+<?php
+$greeting = "Hello";
+$name = "Mbui";
+$message = $greeting . ", " . $name . "!";
+echo $message;
+echo "</br>";
+?>
+
+<!--:Multiple assignment-->
+<?php
+$firstPanda = $secondPanda = $thirdPanda = 1337;
+echo $firstPanda;
+echo "</br>";
+echo($secondPanda);
+echo "</br>";
+echo "</br>";
+?>
+
+<!--camelCasedvariablenames-->
+<?php
+$earthWormJim = 1;
+$powerRangers = 11;
+$spongeBobSquarePants = 111;
+echo "".$powerRangers. "</br>";
+echo "".$earthWormJim. "</br>";
+echo $spongeBobSquarePants;
+
+
