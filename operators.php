@@ -131,7 +131,7 @@ echo "</br>";   echo "</br>";
 ?>
 
 <!--Conditional or Ternary Operators:-->
-<!--sed to compare two values and take either of the results simultaneously,-->
+<!--used to compare two values and take either of the results simultaneously,-->
 <!--depending on whether the outcome is TRUE or FALSE. -->
 
 <!--Syntax:-->
@@ -205,14 +205,19 @@ $y = array("a" => "Train", "b" => "Plane");
 var_dump($x + $y);
 echo "</br>";
 echo "</br>";
+
 var_dump($x == $y);
 echo "</br>";
+
 var_dump($x != $y) ;
 echo "</br>";
+
 var_dump($x <> $y);
 echo "</br>";
+
 var_dump($x === $y);
 echo "</br>";
+
 var_dump($x !== $y);
 echo "</br>"; echo "</br>";
 ?>
