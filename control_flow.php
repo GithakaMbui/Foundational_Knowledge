@@ -1,4 +1,4 @@
-<!--1. PHP Decision Making-->
+<!--1. PHP Decision Making : Selection statements -->
 <!--PHP allows us to perform actions based on some type of conditions that may be logical or comparative.-->
 <!--Based on the result of these conditions i.e., either TRUE or FALSE-->
 
@@ -19,7 +19,7 @@
 
 <!------------------------------------------------------------->
 
-<!--1. Decision Making-->
+<!--1. Decision Making/Selection statements -->
 
 <!--    a.) If Statement-->
 <?php
