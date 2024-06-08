@@ -44,5 +44,39 @@ $nums = [1, 10, 5, -9, -1];
 
 for ($i = 0; $i < count($nums); $i++) {
     echo $nums[$i], "\n";
-    echo "</br>";
+    echo "</br>";echo "</br>"; echo "</br>";
 }
+?>
+
+<!--2. The For Each Loop -->
+<!--        This loop is similar to the for loop but is used to loop over arrays.-->
+<!--Two syntaxes:-->
+<!--1) foreach ($array as $value) -->
+<!--{ -->
+<!--//code to be executed;-->
+<!--} -->
+
+<!--2) foreach ($array as $key=>$value) -->
+<!--{ -->
+<!--//code to be executed;-->
+<!--} -->
+
+<!--example 1:-->
+<?php
+$arr1 = array(11, 12, 13, 14, 15);
+foreach($arr1 as $num)
+{
+    echo 'The number is '.$num.'<BR>';
+}
+echo "</br>";
+echo "</br>";
+?>
+
+<!--example 2-->
+<?php
+$arr2 = array('Aaron'=>12, 'Ben'=>23, 'Carol'=>35);
+foreach ($arr2 as $name=>$age) {
+    echo $name . ' is ' . $age . ' years old.<BR>';
+}
+?>
+
