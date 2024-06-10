@@ -126,5 +126,41 @@ $e++;
 echo "</br>"; echo "</br>";
 ?>
 
+<!--Switch Statement -->
+<!--It is typically used when the condition involves comparing a variable against -->
+<!--a single value (instead of a range of values). -->
 
+<!--syntax:-->
+<!--switch (variable used for switching)-->
+<!--{ case firstCase:-->
+<!--Task A;-->
+<!--break;-->
+<!---->
+<!--case secondCase:-->
+<!--Task B;-->
+<!--break;-->
+<!--...-->
+<!--default: Default task;-->
+<!--}-->
 
+<!--example-->
+<?php
+$b = 10;
+switch ($b)
+{
+
+case 10:
+echo 'Chocolate<BR>';
+break;
+
+case 20:
+echo 'Lemon<BR>';
+
+case 25:
+echo 'Strawberry<BR>';
+break;
+
+default:
+echo 'None of the above<BR>';
+}
+?>
