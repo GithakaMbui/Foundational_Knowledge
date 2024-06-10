@@ -49,8 +49,11 @@ for ($i = 0; $i < count($nums); $i++) {
 ?>
 
 <!--2. The For Each Loop -->
+
 <!--        This loop is similar to the for loop but is used to loop over arrays.-->
+
 <!--Two syntaxes:-->
+
 <!--1) foreach ($array as $value) -->
 <!--{ -->
 <!--//code to be executed;-->
@@ -78,5 +81,25 @@ $arr2 = array('Aaron'=>12, 'Ben'=>23, 'Carol'=>35);
 foreach ($arr2 as $name=>$age) {
     echo $name . ' is ' . $age . ' years old.<BR>';
 }
+echo "</br>";
+echo "</br>"; echo "</br>";
 ?>
 
+<!--While Loop-->
+<!--This loop performs a task repeatedly while a specific condition remains valid-->
+
+<!--The syntax is as follows:-->
+<!--while (condition is true) -->
+<!--{ -->
+<!--//do A -->
+<!--} -->
+
+<!--Example:-->
+<?php
+$d = 1;
+while ($d < 5)
+{
+    echo 'The value of d is ' . $d . '<BR>';
+    $d++;
+}
+?>
