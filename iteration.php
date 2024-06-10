@@ -102,4 +102,29 @@ while ($d < 5)
     echo 'The value of d is ' . $d . '<BR>';
     $d++;
 }
+echo "</br>"; echo "</br>";
 ?>
+
+<!--Do-while Loop -->
+<!--This loop is very similar to the while loop except that the test condition is placed at the end of the loop.-->
+<!--This means that the code within the curly braces of the loop will always be executed at least once. -->
+
+<!--The syntax of a do-while loop is:-->
+    <!--do {-->
+    <!--//some tasks -->
+    <!--}-->
+    <!--while (condition is true); -->
+
+<!--NB: a semicolon (;) is required after the test condition-->
+<!--Example-->
+<?php
+$e = 100;
+do {
+echo 'The value is '.$e;
+$e++;
+} while($e<0);
+echo "</br>"; echo "</br>";
+?>
+
+
+
