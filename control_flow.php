@@ -132,3 +132,25 @@ switch($num){
 }
 echo "</br>";  echo "</br>";
 ?>
+
+<!--The Ternary Operator-->
+<!--The ternary operator (?:) is a shorthand method shorthand method of representing a conditional statement.-->
+<!--Its name came from the fact that it normally uses three operands. The basic syntax looks like this:-->
+
+<!--condition ? value if true : value if false;-->
+
+<?php
+$age = 17;
+$fareType = $age >= 16 ? 'adult' : 'child';
+echo $fareType;
+echo "</br>";  echo "</br>";
+?>
+
+<!--Null Coalescing Operator-->
+<!--The null coalescing operator is a convenient way of assigning a default value to a variable when another -->
+<!--variable—such as one containing user input from an online form—hasn’t been defined-->
+
+<!--syntax-->
+<!--$greeting = $_GET['name'] ?? 'guest';-->
+
+<!--$greeting = $_GET['name'] ?? $nonexistent ?? $undefined ?? 'guest';-->
