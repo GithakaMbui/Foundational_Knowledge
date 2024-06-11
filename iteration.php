@@ -163,5 +163,29 @@ break;
 default:
 echo 'None of the above<BR>';
 }
+echo "</br>"; echo "</br>";
 ?>
 
+<!--Break, Continue-->
+<!--A break statement ends the execution of the loop it is in-->
+<?php
+for ($i = 0; $i < 50; ++$i)
+{ echo "$i<BR>";
+    if ($i == 4) break;
+    echo "</br>";
+}
+echo "</br>";  echo "</br>";
+?>
+
+<!--continue statement-->
+<!--it causes the rest of the loop to be skipped for that particular iteration.-->
+<?php
+for ($i = 0; $i < 6; ++$i)
+{ echo '$i = '.$i.', ';
+    if ($i == 4)
+        continue;
+    echo 'First.';
+    echo 'Second.<BR>';
+}
+echo "</br>";  echo "</br>";
+?>
