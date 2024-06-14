@@ -77,3 +77,97 @@ $anotherAssocMDArr = array(
 echo $anotherAssocMDArr["first player"]["age"];
 echo "</br>"; echo "</br>";
 ?>
+
+<!--Displaying the Content of Arrays -->
+
+<!--a) Use the var_dump() function -->
+<?php
+$myArray = array(2, 5.1, 'PHP', 105);
+echo '<pre>';
+var_dump($myArray);
+echo '<pre>';
+?>
+
+<!--b) Use the print_r() function-->
+<?php
+$myArray = array(2, 5.1, 'PHP', 105);
+echo '<pre>';
+print_r($myArray);   //  its output is more concise as it does not give us the data type of each element.
+echo '<pre>';
+?>
+
+-------------------------------------------------------------------
+<!--Array Operations-->
+--------------------------------------------------------------------
+<!--1. Adding Elements to Arrays -->
+
+<!--i) use the square bracket notation-->
+<?php
+$addDemo = array(1, 5, 3, 9);
+$addDemo[] = 7;
+echo '<pre>';
+print_r($addDemo);
+echo '<pre>';
+?>
+
+<!--Example 2 -->
+<?php
+$addDemoAssoc = array('Peter'=>20, 'Jane'=>15);
+$addDemoAssoc['James'] = 17;
+
+echo count($addDemoAssoc);
+
+echo '<pre>';
+print_r($addDemoAssoc);
+echo '<pre>';
+?>
+
+<!--ii) Using the array_push() function-->
+<?php
+$programmingLanguages = ['PHP', 'Java', 'Kotlin'];
+array_push($programmingLanguages, 'SQL', 'GO');
+
+echo count($programmingLanguages);
+
+echo '<pre>';
+print_r($programmingLanguages);
+echo '<pre>';
+?>
+
+<!--2. Deleting Elements from Arrays -->
+
+<!--a) Using array_pop() function-->
+<?php
+$someRandomNumbers = [10,20,30, 40,50, 60];
+array_pop($someRandomNumbers);   //This removes the last element from the array
+
+echo count($someRandomNumbers);
+
+echo '<pre>';
+print_r($someRandomNumbers);
+echo '<pre>';
+?>
+
+<!--b) Using array_shift() function-->
+<?php
+$someRandomLetters = ['a', 'b', 'c', 'd', 'e', 'f'];
+array_shift($someRandomLetters); // This removes the first element from the array
+                                        //Note: The array gets re-indexed when you use array_shuft
+echo count($someRandomLetters);
+
+echo '<pre>';
+print_r($someRandomLetters);
+echo '<pre>';
+?>
+
+<!--c) use the array_splice() function. -->
+<?php
+$colors = array("red", "black", "pink", "white", "green");
+array_splice($colors, 2, 2); //we need to pass two arguments to it -
+                                      // the array to remove elements from and the
+                                        // position to start removing them. We can also pass a third argument
+                                            // to specify the number of elements to remove.
+echo '<pre>';
+print_r($colors);
+echo '<pre>';
+?>
