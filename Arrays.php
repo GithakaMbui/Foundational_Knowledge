@@ -163,10 +163,11 @@ echo '<pre>';
 <!--c) use the array_splice() function. -->
 <?php
 $colors = array("red", "black", "pink", "white", "green");
-array_splice($colors, 2, 2); //we need to pass two arguments to it -
-                                      // the array to remove elements from and the
-                                        // position to start removing them. We can also pass a third argument
-                                            // to specify the number of elements to remove.
+array_splice($colors, 2, 2); //we need to pass two arguments to it: -
+                                                // the array to remove elements from and the
+                                                // position to start removing them.
+                                                // We can also pass a third argument to specify the number
+                                                // of elements to remove.
 echo '<pre>';
 print_r($colors);
 echo '<pre>';
