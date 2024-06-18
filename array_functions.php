@@ -317,7 +317,7 @@ usort($names, fn($x,$y) => strlen($x) <=> strlen($y));
 var_dump($names);
 ?>
 
-    iii) Using the PHP usort() function to sort an array of objects
+<!--    iii) Using the PHP usort() function to sort an array of objects-->
 
 <?php
 
@@ -344,3 +344,32 @@ usort($group, function ($x, $y) { // usort() function uses a comparison function
 });
 
 print_r($group);
+?>
+
+<!--Array_map() function:-->
+<!--It applies a user-defined function to each value of an array and returns a NEW array with the results.-->
+<!--The user-defined function can be used to transform the values of the array in any way desired.-->
+<?php
+function double($number)
+{
+    return $number * 2;
+}
+
+$array = [1, 2, 3, 4, 5];
+$new_array = array_map('double', $array);
+print_r($new_array);
+
+?>
+
+<!--Another Example-->
+<?php
+
+function addElements($x, $y) {
+    return  $x * $y;
+}
+$array1 = array(1, 2, 3, 4, 5);
+$array2 = array(6, 7, 8, 9, 10);
+$added_arrays = array_map('addElements', $array1, $array2);
+print_r($added_arrays);
+
+?>
