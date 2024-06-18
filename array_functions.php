@@ -232,6 +232,7 @@ print_r(array_sum($a));
 ?>
 
 <!--PHP array_unique() Function-->
+
 <!--removes duplicates-->
 <!--returns the filtered array after removing all duplicates from the array.-->
 <?php
@@ -243,3 +244,103 @@ $a=array("red", "green", "red", "blue");
 print_r(array_unique($a));
 
 ?>
+
+<!--PHP usort() Function-->
+<!--function in PHP sorts a given array by using a user-defined comparison function.-->
+
+<!--    i) Using the PHP usort() function to sort an array of numbers-->
+
+<!--example 1-->
+<?php
+// This is the user-defined function used to compare /values to sort the input array
+function comparatorFunc( $x, $y)
+{
+    // If $x is equal to $y it returns 0
+    if ($x== $y)
+        return 0;
+
+    // if x is less than y then it returns -1
+    // else it returns 1
+    if ($x < $y)
+        return -1;
+    else
+        return 1;
+}
+
+// Input array
+$arr= array(2, 9, 1, 3, 5);
+
+usort($arr, "comparatorFunc");
+
+print_r($arr);
+
+?>
+
+<!--example 2-->
+
+<?php
+$numbers = [2, 1, 3, 6, 7, 4];
+usort($numbers, function ($x, $y) {
+    if ($x === $y) {
+        return 0;
+    }
+    return $x < $y ? -1 : 1;
+});
+
+print_r($numbers);
+?>
+
+<!--If you use PHP 7 or newer, you can use the spaceship operator (<=>) to make the code more concise: $x <=> $y-->
+
+<!--The spaceship operator compares two expressions and returns -1, 0, or 1 when $x is respectively less than, -->
+<!--equal to, or greater than $y-->
+
+<!--Example 3-->
+<?php
+
+$numbers = [29, 15, 31, 65, 78, 35, 11];
+
+usort($numbers, function ($x, $y) {
+    return $x <=> $y;
+});
+
+print_r($numbers);
+?>
+
+<!--    ii) Using the PHP usort() function to sort an array of strings by length-->
+
+<?php
+
+$names = [ 'Alex', 'Nicholas',  'James' ];
+usort($names, fn($x,$y) => strlen($x) <=> strlen($y));
+
+var_dump($names);
+?>
+
+    iii) Using the PHP usort() function to sort an array of objects
+
+<?php
+
+class Person
+{
+    public $name;    //  define a Person class that has two properties: name and age.
+    public $age;
+    public function __construct(string $name, int $age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+}
+
+$group = [                             //define the $group array that holds the Person objects
+    new Person('Bob', 20),
+    new Person('Alex', 25),
+    new Person('Peter', 30),
+];
+
+usort($group, function ($x, $y) { // usort() function uses a comparison function that
+                                            // compares the age of two Person objects
+    return $x->age <=> $y->age;
+});
+
+print_r($group);
