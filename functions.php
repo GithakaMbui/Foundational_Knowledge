@@ -1,3 +1,4 @@
+
 <!--Example 1-->
 <!--------------->
 <?php
@@ -65,4 +66,48 @@ function doubleIt(int $number) {
 $doubled_number = doubleIT(15);
 echo $doubled_number;
 echo "</br>"; echo "</br>";
+?>
+
+<!--Example 2-->
+
+<?php
+//declare(strict_types=1);  // This should be the first statement in the script
+function addTwoNums($a, $b): int {
+return $a + $b;
+}
+
+echo '<BR>'.addTwoNums(3, 1);
+
+echo '<BR>'.addTwoNums(3.9, 1);
+echo "</br>"; echo "</br>";
+?>
+
+<!--Example 3-->
+ <?php
+  // Say hello to an array of people.
+function sayHello(array $names) {
+    foreach ($names as $name) {
+        echo "Hello, {$name}! </br>";
+    }
+}
+sayHello(['Katie', 'Corissa', 'Lucy']);
+ echo "</br>"; echo "</br>";
+?>
+
+
+<!--Infiniteparameters.-->
+
+<?php
+function welcome() {
+    // Get all function parameters.
+ $names = func_get_args();  //When we use func_get_args() we receive any parameters that are given
+                            // to the function in the form of an indexed array.
+
+    foreach ($names as $name) {     // Iterate the names and welcome them.
+    echo "Welcome, {$name}! </br>";
+    }
+}
+
+welcome('Dayle', 'James', 'Andrea', 'Ben', 'Mateusz');
+
 ?>
