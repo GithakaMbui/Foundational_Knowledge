@@ -111,3 +111,48 @@ function welcome() {
 welcome('Dayle', 'James', 'Andrea', 'Ben', 'Mateusz');
 
 ?>
+
+<!------------------------------------------------------------------------------------------------------------->
+<!--CLOSURES-->
+<!--Closures are special functions. These types of functions don’t have a name.-->
+<!------------------------------------------------------------------------------------------------------------->
+<!--Example-->
+<?php
+$cat = function ()
+{
+    echo 'Oh long Johnson!';
+};           //  Note that we have a semi;colon appended to ou rfunction
+$cat();
+echo "</br>"; echo "</br>";
+
+?>
+
+<!--Passing functions to functions-->
+
+                <!--Example:Passing Closures to functions.-->
+
+<?php
+// Create a math function.
+ function math(Closure $type, $first, $second) {   // It receives a type-hinted Closure, and two other variables as parameters
+
+// Execute the closure with parameters
+ return $type($first, $second);
+ }
+
+ // Create an addition closure.
+$addition = function ($first, $second) {
+return $first + $second;             //Add the values.
+ };
+
+ //Create a subtraction closure.
+$subtraction = function($first,$second){
+//Subtract the values
+    return $first - $second;
+};
+
+//Execute math function.
+echo math($addition,20,25);
+echo "</br>";
+echo math($subtraction,50,30);
+
+?>

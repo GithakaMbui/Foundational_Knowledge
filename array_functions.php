@@ -373,3 +373,33 @@ $added_arrays = array_map('addElements', $array1, $array2);
 print_r($added_arrays);
 
 ?>
+
+<!--<!--Another Map_array Example-->-->
+<?Php
+//
+//function AreaOfRectangles($length, $width){
+//    return $length * $width;
+//}
+//$lengthArray = array(10, 20, 30, 40);
+//$widthArray = array(5, 10, 15, 20)
+//
+//$areaOfRectangles = array_map("AreaOfRectangles", $lengthArray, $widthArray);
+//
+//print_r($areaOfRectangles);
+//?>
+
+Fixing Example above
+<?php
+function areaOfRectangles($x, $y) {
+return  $x * $y;
+}
+$array1 = array(1, 2, 3, 4, 5);
+$array2 = array(6, 7, 8, 9, 10);
+
+$area_of_rectangles = array_map('areaOfRectangles', $array1, $array2);
+
+echo '<pre>';
+print_r($area_of_rectangles);
+echo '<pre>';
+
+?>
