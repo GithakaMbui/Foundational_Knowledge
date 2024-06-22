@@ -114,14 +114,14 @@ welcome('Dayle', 'James', 'Andrea', 'Ben', 'Mateusz');
 
 <!------------------------------------------------------------------------------------------------------------->
 <!--CLOSURES-->
-<!--Closures are special functions. These types of functions don’t have a name.-->
+<!--Closures are special functions.They are called anonymous function.These types of functions don’t have a name.-->
 <!------------------------------------------------------------------------------------------------------------->
 <!--Example-->
 <?php
 $cat = function ()
 {
     echo 'Oh long Johnson!';
-};           //  Note that we have a semi;colon appended to ou rfunction
+};           //  Note that we have a semi;colon appended to our function
 $cat();
 echo "</br>"; echo "</br>";
 
