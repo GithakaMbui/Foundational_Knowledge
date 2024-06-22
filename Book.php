@@ -20,7 +20,19 @@ class Book
                     // Variables that belong to a class,are called ‘class properties’
     var $publisher;
     var $yearOfPublication;
+    var $format = 'Paperback'; // This is a default value. A default values,can’t be set to the results of functions.
+
+    // Declare a method.
+    function sayHello()
+    {
+        return 'Hello Ninja Turtle!';
+    }
+
 }
+
+
+
+
 
 //Instances
 //An instance, is a class that we can use
@@ -37,6 +49,9 @@ $book = new Book;     // We create a new instance of the Book class, and assign 
 $book->publisher = 'Voyager Books';
 $book->yearOfPublication = 1996;
 
+// /Change the value of format which is a default value
+$book->format='Hardback';
+
 //Retrieving class properties.
 //I will use the object->operator to echo the properties of the book instance
 // Echo properties.
@@ -45,7 +60,15 @@ echo $book->author . "</br>";
 echo $book->publisher . "</br>";
 echo $book->yearOfPublication . "</br>";
 echo "</br>";
-     // Multiple class instances
+
+//Echo the value of format.
+echo$book->format ."</br>";
+echo "</br>";
+
+
+
+// Multiple class instances
+
 // Create another book instance.
  $second = new Book;
 
@@ -61,5 +84,13 @@ echo $second->title . "</br>";
 echo $second->author . "</br>";
 echo $second->publisher . "</br>";
 echo $second->yearOfPublication . "</br>";
+
+echo $book->format . "</br>";
+
+echo $second->format;
+echo "</br>";
+
+// Execute the hello method.
+ echo $second->sayHello();
 ?>
 
