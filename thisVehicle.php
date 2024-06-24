@@ -2,6 +2,10 @@
 //The $this property is a shortcut to reference the current class instance.
 //You can use it to access class properties and other methods from within a class method
 
+
+//The $this keyword indicates that we use the class’s own methods and properties,
+//and allows us to have access to them within the class’s scope
+
 //Define a Vehicle class
 class Vehicle {
     //declare properties/attributes
@@ -29,3 +33,5 @@ $car->year_of_manufacture = 2014;
 
 //Output a vehicle summary
 $car->summary();
+
+
