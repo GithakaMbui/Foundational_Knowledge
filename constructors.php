@@ -30,5 +30,27 @@ echo "</br>";
 // Create another car Object and pass a value to it
 $car1 = new Car('Toyota Prado VX');
 echo $car1 -> getCarModel();
+echo "</br>"; echo "</br>";
+?>
+
+<!--                            Magic constants-->
+<!--We use the magic constant __CLASS__ (magic constants are written in uppercase letters-->
+<!--and prefixed and suffixed with two under lines) inorder to get the name of the class in which it resides.-->
+
+<?php
+class Bike {
+    private $model = '';
+// The constructor
+public function __construct($model = null)
+{ if($model)
+{ $this -> model = $model;
+}
+}
+public function getCarModel() { // We use the __class__ magic constant // in order to get the class name
+    return " The <b>" . __class__ . "</b> model is: " . $this -> model;
+}
+}
+$car1 = new Bike('RangeRover Sport');
+echo $car1 -> getCarModel();
 
 ?>
