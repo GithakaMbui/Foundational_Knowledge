@@ -46,11 +46,11 @@ public function __construct($model = null)
 { $this -> model = $model;
 }
 }
-public function getCarModel() { // We use the __class__ magic constant // in order to get the class name
+public function getBikeModel() { // We use the __class__ magic constant // in order to get the class name
     return " The <b>" . __class__ . "</b> model is: " . $this -> model;
 }
 }
-$car1 = new Bike('RangeRover Sport');
-echo $car1 -> getCarModel();
+$car1 = new Bike('Datsun');
+echo $car1 -> getBikeModel();
 
 ?>
