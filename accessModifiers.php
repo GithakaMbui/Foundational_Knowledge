@@ -31,10 +31,39 @@ $mercedes = new Gari();
 // We try to access a private property from outside the class.
 $mercedes -> model = "Mercedes";
 echo $mercedes -> getModel();
+echo "</br>"; echo "</br>";
 ?>
+
 
 <!--How to access a private property?-->
 <!---->
 <!--WE use two kinds of methods:-->
 <!--• Setters that set the values of the private properties. -->
 <!--• Getters that get the values of the private properties.-->
+
+<?php
+class Bike {
+// The private access modifier denies access to the method // from outside the class’s scope
+private $model;
+// The public access modifier allows the access to the method // from outside the class
+public function  setModel($model)
+{
+
+    $this -> model = $model;
+}
+    public function getModel() {
+    return "The bike model is " . $this -> model;
+}
+}
+
+//instanitiate the Motorbike model
+$bmw = new Bike();
+
+// Set the bike’s model
+$bmw -> setModel("BMW");
+
+// Get the bike’s model echo
+echo $bmw -> getModel();
+?>
+
+
