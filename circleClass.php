@@ -18,7 +18,11 @@ echo $circle->circumference(32);
 
 echo "<br/>";
 
-//n
+//acccess
+// constant
 echo$circle::PI;
-return$diameter*self::PI;
+echo "<br/>";
+
+
+
 
