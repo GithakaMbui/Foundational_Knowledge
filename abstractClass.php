@@ -7,10 +7,8 @@ protected $tankVolume;
  public function setTankVolume($volume) {
      $this -> tankVolume = $volume;
  }
-}
 // Abstract method
 abstract public function calcNumMilesOnFullTank();
-
 
 }
 
@@ -32,7 +30,7 @@ public function calcNumMilesOnFullTank() {
 }
 // create a new object, $toyota1, with a full tank volume of 10 Gallons, and make it return
 //    the number of miles on full tank as well as the car’s color
-$toyota1 = new Toyota();
+$toyota1 = new Honda();
 $toyota1 -> setTankVolume(10);
 echo $toyota1 -> calcNumMilesOnFullTank();
 echo "<br/>";
